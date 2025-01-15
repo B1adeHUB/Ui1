@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("GeY HUB", "DarkTheme")
+local Window = Library.CreateLib("ลมบล 888", "DarkTheme")
 
 local Tab = Window:NewTab("Main")
 
@@ -12,7 +12,7 @@ local Fast = require(game:GetService("Players").LocalPlayer.PlayerScripts.Combat
 
 local CameraShaker = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
 
-_G.Fastattack = state -- true\false
+_G.Fastattack = true -- true\false
 
 game:GetService("RunService").RenderStepped:Connect(function()
 
@@ -20,9 +20,9 @@ game:GetService("RunService").RenderStepped:Connect(function()
 
         if _G.Fastattack then
 
-Fast.activeController.timeToNextAttack = 0.001
+Fast.activeController.timeToNextAttack = 0.0001
 
-Fast.activeController.hitboxMagnitude = 50
+Fast.activeController.hitboxMagnitude = 60
 
 game:GetService'VirtualUser':CaptureController()
 
